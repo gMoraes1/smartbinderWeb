@@ -1,6 +1,6 @@
 {
-    "title": "Introduce your product quickly & effectively",
-    "text": "Landy comes with multi-lingual support, all of the content is stored in the JSON files, so that you can manage the texts without having any prior knowledge in developing web applications using React.js.",
+    "title": "O que o nosso aplicativo faz",
+    "text": "Nosso aplicativo busca ser aliado perfeito para os professores, simplificando suas tarefas do dia a dia de modo mais eficaz e organizada. Com funcionalidades como o cadastro de aluno, o cadastro de turmas, a criação e observação de sondagens, além de poder exportar os resultados para um excel ou pdf.",
     "button": "Get started"
   }
   
