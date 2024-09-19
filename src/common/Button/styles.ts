@@ -18,8 +18,7 @@ export const StyledButton = styled("button")<{ color?: string }>`
   &:hover,
   &:active,
   &:focus {
-    color: #fff;
-    border: 1px solid rgb(255, 130, 92);
-    background-color: rgb(255, 130, 92);
+    color: #2B1A58;
+    background-color: #FFDE00;
   }
 `;

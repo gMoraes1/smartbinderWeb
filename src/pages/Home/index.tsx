@@ -33,22 +33,21 @@ const Home = () => {
         direction="left"
         title={AboutContent.title}
         content={AboutContent.text}
-        section={AboutContent.section}
-        icon="graphs.svg"
+        icon="about.jpg"
         id="about"
       />
       <ContentBlock
         direction="right"
         title={MissionContent.title}
         content={MissionContent.text}
-        icon="product-launch.svg"
+        icon="teacher.png"
         id="mission"
       />
       <ContentBlock
         direction="left"
         title={ProductContent.title}
         content={ProductContent.text}
-        icon="waving.svg"
+        icon="women.png"
         id="product"
       />
       <Contact

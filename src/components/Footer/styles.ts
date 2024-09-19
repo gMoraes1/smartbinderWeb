@@ -49,7 +49,7 @@ export const Para = styled("div")`
   width: 70%;
 `;
 
-export const Large = styled(Link)`
+export const Large = styled("a")`
   font-size: 16px;
   color: #000;
   cursor: pointer;
