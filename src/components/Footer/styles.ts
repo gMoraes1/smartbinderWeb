@@ -4,15 +4,19 @@ import { Link } from "react-router-dom";
 export const FooterSection = styled("footer")`
   background: rgb(241, 242, 243);
   padding: 2.5rem 0;
+
+  
+
 `;
 
 export const Title = styled("h4")`
-  font-size: 22px;
+  font-size: 20px;
   text-transform: capitalize;
   color: #18216d;
-
+  font-size: 26px;
   @media screen and (max-width: 414px) {
     padding: 1.5rem 0;
+    
   }
 `;
 
@@ -21,11 +25,13 @@ export const NavLink = styled(Link)`
   font-size: 1rem;
   margin-bottom: 0.625rem;
   transition: all 0.2s ease-in-out;
+ 
 
   &:hover,
   &:active,
   &:focus {
     color: #15418e;
+    
   }
 `;
 
@@ -36,6 +42,7 @@ export const Extra = styled("section")`
   margin-right: auto;
   margin-left: auto;
   padding-bottom: 2rem;
+
 `;
 
 export const LogoContainer = styled("div")`
@@ -85,11 +92,12 @@ export const Chat = styled("p")`
 export const Empty = styled("div")`
   position: relative;
   height: 53px;
+  margin: -4    0px
 `;
 
 export const FooterContainer = styled("div")`
   max-width: 510px;
-  width: 100%;
+  width: 100;
   display: flex;
   justify-content: space-between;
   text-align: center;
@@ -117,7 +125,7 @@ export const FooterContainer = styled("div")`
   div {
     cursor: pointer;
     margin-right: 15px;
-    width: 25px;
+    width: 20px;
     height: 25px;
 
     &:hover {
