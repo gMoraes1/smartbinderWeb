@@ -4,21 +4,29 @@ import { Link } from "react-router-dom";
 export const FooterSection = styled("footer")`
   background: rgb(241, 242, 243);
   padding: 2.5rem 0;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   
 
 `;
 
 export const Title = styled("h4")`
-  font-size: 20px;
   text-transform: capitalize;
   color: #18216d;
   font-size: 26px;
+
+  
   @media screen and (max-width: 414px) {
     padding: 1.5rem 0;
     
   }
 `;
+export const FooterTitle = styled("h3")`
+  font-size: 18px;
+`;
+
 
 export const NavLink = styled(Link)`
   display: block;
@@ -37,23 +45,25 @@ export const NavLink = styled(Link)`
 
 export const Extra = styled("section")`
   background: rgb(241, 242, 243);
-  position: relative;
   width: 100%;
-  margin-right: auto;
-  margin-left: auto;
   padding-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 `;
 
 export const LogoContainer = styled("div")`
   display: flex;
-  position: relative;
+
+
 `;
 
 export const Para = styled("div")`
   color: #18216d;
   font-size: 14px;
-  width: 70%;
+  width: 100%;
+  
 `;
 
 export const Large = styled("a")`
@@ -82,6 +92,7 @@ export const Chat = styled("p")`
   cursor: pointer;
   margin-top: 1rem;
   transition: all 0.3s ease-in-out;
+  
 
   &:hover {
     border-bottom: 1px solid rgb(255, 130, 92);
@@ -93,6 +104,7 @@ export const Empty = styled("div")`
   position: relative;
   height: 53px;
   margin: -4    0px
+  
 `;
 
 export const FooterContainer = styled("div")`
@@ -138,6 +150,7 @@ export const Language = styled("h4")`
   font-size: 22px;
   text-transform: capitalize;
   color: #18216d;
+  
 
   @media screen and (max-width: 414px) {
     padding: 1.5rem 0;

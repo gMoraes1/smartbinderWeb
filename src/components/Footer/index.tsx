@@ -16,6 +16,7 @@ import {
   Empty,
   FooterContainer,
   Language,
+  FooterTitle,
 } from "./styles";
 
 interface SocialLinkProps {
@@ -82,11 +83,12 @@ const Footer = ({ t }: { t: TFunction }) => {
         <Row
           justify="space-between"
           align="middle"
+          
           style={{ paddingTop: "3rem" }}
         >
           <NavLink to="/">
             <LogoContainer>
-            <Title>Site desenvolvido pela equipe SmartBinder. Todos os direitos reservados 2024.</Title>    
+            <FooterTitle>Site desenvolvido pela equipe SmartBinder. Todos os direitos reservados 2024.</FooterTitle>    
             </LogoContainer>
           </NavLink>
           <FooterContainer>
