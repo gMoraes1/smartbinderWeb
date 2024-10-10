@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledContainer = styled("div")<{
   border?: boolean;
 }>`
-  position: relative;
+  
   width: 100%;
   max-width: 1100px;
   margin-right: auto;
@@ -25,3 +25,5 @@ export const StyledContainer = styled("div")<{
     padding: 0 18px;
   }
 `;
+
+

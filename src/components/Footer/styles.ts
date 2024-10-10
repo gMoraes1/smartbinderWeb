@@ -8,8 +8,6 @@ export const FooterSection = styled("footer")`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  
-
 `;
 
 export const Title = styled("h4")`
@@ -17,29 +15,25 @@ export const Title = styled("h4")`
   color: #18216d;
   font-size: 26px;
 
-  
   @media screen and (max-width: 414px) {
     padding: 1.5rem 0;
-    
   }
 `;
+
 export const FooterTitle = styled("h3")`
   font-size: 18px;
 `;
-
 
 export const NavLink = styled(Link)`
   display: block;
   font-size: 1rem;
   margin-bottom: 0.625rem;
   transition: all 0.2s ease-in-out;
- 
 
   &:hover,
   &:active,
   &:focus {
     color: #15418e;
-    
   }
 `;
 
@@ -50,20 +44,25 @@ export const Extra = styled("section")`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
 
+export const InnerContainer = styled("div")`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 `;
 
 export const LogoContainer = styled("div")`
   display: flex;
-
-
+  justify-content: center;
+  align-items: center;
 `;
 
 export const Para = styled("div")`
   color: #18216d;
   font-size: 14px;
   width: 100%;
-  
 `;
 
 export const Large = styled("a")`
@@ -92,7 +91,6 @@ export const Chat = styled("p")`
   cursor: pointer;
   margin-top: 1rem;
   transition: all 0.3s ease-in-out;
-  
 
   &:hover {
     border-bottom: 1px solid rgb(255, 130, 92);
@@ -103,17 +101,16 @@ export const Chat = styled("p")`
 export const Empty = styled("div")`
   position: relative;
   height: 53px;
-  margin: -4    0px
-  
+  margin: -4 0px;
 `;
 
 export const FooterContainer = styled("div")`
   max-width: 510px;
-  width: 100;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  text-align: center;
+  justify-content: center;
   align-items: center;
+  text-align: center;
   transition: all 0.1s ease-in-out;
 
   a {
@@ -150,7 +147,6 @@ export const Language = styled("h4")`
   font-size: 22px;
   text-transform: capitalize;
   color: #18216d;
-  
 
   @media screen and (max-width: 414px) {
     padding: 1.5rem 0;

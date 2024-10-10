@@ -17,6 +17,7 @@ import {
   FooterContainer,
   Language,
   FooterTitle,
+  InnerContainer,
 } from "./styles";
 
 interface SocialLinkProps {
@@ -80,6 +81,7 @@ const Footer = ({ t }: { t: TFunction }) => {
     </FooterSection>
     <Extra>
       <Container border={true}>
+      <InnerContainer>
         <Row
           justify="space-between"
           align="middle"
@@ -92,9 +94,9 @@ const Footer = ({ t }: { t: TFunction }) => {
             </LogoContainer>
           </NavLink>
           <FooterContainer>
-        
           </FooterContainer>
         </Row>
+        </InnerContainer>
       </Container>
     </Extra>
   </>
