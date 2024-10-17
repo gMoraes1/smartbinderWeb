@@ -91,5 +91,8 @@ export const Span = styled("span")`
     color: rgb(255, 130, 92);
     text-underline-position: under;
     text-decoration: rgb(255, 130, 92) wavy underline;
+    display: flex;
+    margin-top: 0.5rem;
+    justify-content: center;
   }
 `;

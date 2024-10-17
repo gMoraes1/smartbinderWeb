@@ -26,11 +26,19 @@ const Header = ({ t }: { t: TFunction }) => {
   const MenuItem = () => {
     const scrollTo = (id: string) => {
       const element = document.getElementById(id) as HTMLDivElement;
-      element.scrollIntoView({
-        behavior: "smooth",
-      });
+      if (element) {
+        const offset = 200; // Ajuste conforme necessário
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.scrollY - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
       setVisibility(false);
     };
+
     return (
       <>
         <CustomNavLinkSmall onClick={() => scrollTo("about")}>
@@ -43,7 +51,7 @@ const Header = ({ t }: { t: TFunction }) => {
           <Span>{t("Produto")}</Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall
-          style={{ width: "180px" }}
+          style={{ width: "150px" }}
           onClick={() => scrollTo("contact")}
         >
           <Span>
