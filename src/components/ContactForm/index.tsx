@@ -46,7 +46,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
               </Col>
               <Col span={24}>
                 <Input
-                  type="text"
+                  type="text" 
                   name="email"
                   placeholder="Seu email"
                   value={values.email || ""}
