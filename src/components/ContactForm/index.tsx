@@ -11,41 +11,11 @@ import TextArea from "../../common/TextArea";
 import { ContactContainer, FormGroup, Span, ButtonContainer } from "./styles";
 
 const Contact = ({ title, content, id, t }: ContactProps) => {
-  const { values, errors, handleChange } = useForm(validate);
+  const { values, errors, handleChange, handleSubmit } = useForm(validate);
 
   const ValidationType = ({ type }: ValidationTypeProps) => {
     const ErrorMessage = errors[type as keyof typeof errors];
     return <Span>{ErrorMessage}</Span>;
-  };
-
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault(); // Evita o envio padrão do formulário
-
-    // Envie os dados para o seu script PHP
-    try {
-      const response = await fetch("URL_DO_SEU_SCRIPT_PHP/send_email.php", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: new URLSearchParams({
-          name: values.name,
-          email: values.email,
-          message: values.message,
-        }),
-      });
-
-      if (response.ok) {
-        // Manipule a resposta do PHP
-        const message = await response.text();
-        alert(message); // Exiba uma mensagem de sucesso
-      } else {
-        alert("Erro ao enviar o e-mail.");
-      }
-    } catch (error) {
-      console.error("Erro:", error);
-      alert("Erro ao enviar o e-mail.");
-    }
   };
 
   return (
@@ -58,7 +28,12 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
         </Col>
         <Col lg={12} md={12} sm={24} xs={24}>
           <Slide direction="right" triggerOnce>
-            <FormGroup autoComplete="off" onSubmit={handleSubmit}>
+            <FormGroup
+              autoComplete="off"
+              action="https://getform.io/f/apjjmrra"
+              method="POST"
+              onSubmit={handleSubmit}
+            >
               <Col span={24}>
                 <Input
                   type="text"
@@ -81,7 +56,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
               </Col>
               <Col span={24}>
                 <TextArea
-                  placeholder=" Sua mensagem"
+                  placeholder="Sua mensagem"
                   value={values.message || ""}
                   name="message"
                   onChange={handleChange}

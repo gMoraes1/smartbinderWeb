@@ -28,23 +28,23 @@ export const useForm = (validate: { (values: IValues): IValues }) => {
     const errors = validate(values);
     setFormState((prevState) => ({ ...prevState, errors }));
 
-    const url = ""; // Fill in your API URL here
+    const url = "https://getform.io/f/apjjmrra"; // URL do Getform.io
 
     try {
       if (Object.values(errors).every((error) => error === "")) {
         const response = await fetch(url, {
           method: "POST",
           headers: {
-            "Content-Type": "application/json",
+            "Content-Type": "application/x-www-form-urlencoded",
           },
-          body: JSON.stringify(values),
+          body: new URLSearchParams(values as any).toString(),
         });
 
         if (!response.ok) {
           notification["error"]({
-            message: "Error",
+            message: "Erro",
             description:
-              "There was an error sending your message, please try again later.",
+              "Houve um erro ao enviar sua mensagem, por favor tente novamente mais tarde.",
           });
         } else {
           event.target.reset();
@@ -54,15 +54,15 @@ export const useForm = (validate: { (values: IValues): IValues }) => {
           }));
 
           notification["success"]({
-            message: "Success",
-            description: "Your message has been sent!",
+            message: "Sucesso",
+            description: "Sua mensagem foi enviada!",
           });
         }
       }
     } catch (error) {
       notification["error"]({
-        message: "Error",
-        description: "Failed to submit form. Please try again later.",
+        message: "Erro",
+        description: "Falha ao enviar o formulário. Por favor, tente novamente mais tarde.",
       });
     }
   };
