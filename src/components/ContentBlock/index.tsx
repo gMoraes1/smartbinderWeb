@@ -55,18 +55,18 @@ const ContentBlock = ({
                     button.map(
                       (
                         item: {
-                          color?: string;
                           title: string;
+                          color?: string;
+                          link?: string;
                         },
                         id: number
                       ) => {
                         return (
-                          <Button
-                            key={id}
-                            color={item.color} 
-                          >
-                            {t(item.title)}
-                          </Button>
+                          <a href={item.link} key={id}>
+                            <Button color={item.color}>
+                              {t(item.title)}
+                            </Button>
+                          </a>
                         );
                       }
                     )}

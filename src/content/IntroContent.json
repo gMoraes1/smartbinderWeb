@@ -1,9 +1,14 @@
 {
   "title": "Conheça o Smart Binder",
-  "text": " Conheça nosso aplicativo revolucionário projetado para simplificar as tarefas diárias dos professores.",
+  "text": "Conheça nosso aplicativo revolucionário projetado para simplificar as tarefas diárias dos professores.",
   "button": [
     {
-      "title": "baixar"
+      "title": "Versão Android",
+      "link": "http://example.com/baixarTe"
+    },
+    {
+      "title": "Versão IOS",
+      "link": "http://example.com/conheca"
     }
   ]
 }
